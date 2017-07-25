@@ -17,7 +17,7 @@ header {
 
                 li {
                     display: inline-block;
-                    padding: 15px 10px;
+                    padding: 10px;
 
                     a {
                         color: darken($light-gray, 30%);
@@ -37,20 +37,42 @@ header {
     }
 
     .header-middle {
+        display: none;
+
         .header-middle-container {
             display: flex;
+            flex-wrap: wrap;
             padding: 10px;
+            width: 750px;
+            max-width: 100%;
+            margin: 0 auto;
 
             .header-middle-logo {
-                width: 800px;
-                max-width: 100%;
+                order: 1;
                 margin: 0 auto;
-
+                width: 50%;
                 .logo {
                     width: 120px;
                     max-width: 100%;
                 }
             }
+
+            .header-middle-search {
+                order: 3;
+                width: 100%;
+                border-top: 1px solid $light-gray;
+                padding: 10px 5px;
+            }
+
+            .header-middle-cart {
+                order: 2;
+                width: 50%;
+                text-align: right;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: block;
         }
     }
 }
