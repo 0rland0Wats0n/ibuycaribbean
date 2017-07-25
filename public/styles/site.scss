@@ -12,6 +12,14 @@
 // You can also add your own custom variables to this file for
 // use in your site stylesheets.
 
+// Google Fonts
+// ============
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800|PT+Serif:400,400i,700,700i');
+
+// Variables
+// =========
+
 @import "site/variables";
 
 
@@ -19,4 +27,12 @@
 // ===========
 
 // Add your own site style includes here
-@import "site/layout";
+body {
+    font: {
+        family: $font-family-main;
+        size: $font-size-base;
+    }
+
+
+    @import "site/layout";
+}

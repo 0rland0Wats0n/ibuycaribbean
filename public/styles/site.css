@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800|PT+Serif:400,400i,700,700i");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5821,16 +5822,43 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-#header {
-  margin-top: 30px; }
-
-#footer {
-  margin-top: 30px;
-  border-top: 1px solid #eeeeee;
-  padding-top: 30px;
-  color: #777777; }
-
-.gallery-image img {
-  display: block;
-  max-width: 100%;
-  height: auto; }
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px; }
+  body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  body header .header-top {
+    padding: 5px 10px;
+    background-color: #edecea;
+    display: none; }
+    body header .header-top .header-top-container {
+      display: flex;
+      flex-direction: row;
+      width: 800px;
+      max-width: 100%;
+      margin: 0 auto; }
+      body header .header-top .header-top-container ul {
+        font-size: 0.9em; }
+        body header .header-top .header-top-container ul li {
+          display: inline-block;
+          padding: 15px 10px; }
+          body header .header-top .header-top-container ul li a {
+            color: #a6a198;
+            text-decoration: none; }
+        body header .header-top .header-top-container ul.header-top-right {
+          margin-left: auto; }
+    @media screen and (min-width: 768px) {
+      body header .header-top {
+        display: block; } }
+  body header .header-middle .header-middle-container {
+    display: flex;
+    padding: 10px; }
+    body header .header-middle .header-middle-container .header-middle-logo {
+      width: 800px;
+      max-width: 100%;
+      margin: 0 auto; }
+      body header .header-middle .header-middle-container .header-middle-logo .logo {
+        width: 120px;
+        max-width: 100%; }
