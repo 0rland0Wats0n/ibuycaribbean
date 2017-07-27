@@ -6,7 +6,9 @@ var keystone = require('keystone'),
 * ==============
 */
 
-var Product = new keystone.List('Product');
+var Product = new keystone.List('Product', {
+    map: { name: 'name.short' }
+});
 
 Product.add({
     description: { type: Types.Textarea },
@@ -29,7 +31,7 @@ Product.add({
 }, "Specs", {
     color: { type: Types.Text, label: "Color" }
 }, "Price", {
-    list_price: { type: Types.Money, format: "$0,0.00", label: "Price" },
+    list_price: { type: Types.Money, format: "$0,0.00", label: "Price", required: true, initial: true },
     sale_price: { type: Types.Money, format: "$0,0.00", label: "Sale Price" },
 }, "Inventory", {
     quantity: { type: Types.Number, initial: true, default: 0, required: true }

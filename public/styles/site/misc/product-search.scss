@@ -1,6 +1,8 @@
 .product-search {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     .product-search-togglecategory {
         width: 30%;
@@ -32,6 +34,7 @@
             line-height: 50px;
             text-transform: uppercase;
             color: darken($light-gray, 25%);
+            margin: 0;
 
             span {
                 margin-left: 10px;
