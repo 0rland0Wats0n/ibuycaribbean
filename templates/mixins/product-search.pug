@@ -1,7 +1,16 @@
-mixin product-search
+mixin product-search(categories)
     form.product-search(method="post")
         fieldset.product-search-searchbox
             input(type="text", placeholder="Search for products")
         fieldset.product-search-togglecategory
+            p.js-display-selected-category 
+                span.js-display-selected-category-text All Categories
+                span.glyphicon.glyphicon-chevron-down
+            ul.product-search-categories-list
+                li(data-category="All Categories") All Categories
+                each category in categories
+                    li(data-category= category.category)= category.category
             select(name="category")
                 option(value="All Categories", selected=selected) All Categories
+                each category in categories
+                    option(value= category.category) #{category.category}

@@ -13,11 +13,57 @@
             width: 100%;
             line-height: 50px;
             font: {
-                size: 1.3em;
-                weight: 300; 
+                size: 1.1em;
+                weight: 400;
             }
             outline: none;
             border: none;
+            color: darken($light-gray, 20%);
+        }
+    }
+
+    .product-search-togglecategory {
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.2em;
+        position: relative;
+
+        .js-display-selected-category {
+            line-height: 50px;
+            text-transform: uppercase;
+            color: darken($light-gray, 25%);
+
+            span {
+                margin-left: 10px;
+            }
+        }
+
+        .product-search-categories-list {
+            position: absolute;
+            display: none;
+            background-color: white;
+            width: 100%;
+            border: 1px solid $light-gray;
+
+            li {
+                line-height: 75px;
+                text-transform: uppercase;
+                transition: background-color 0.3s linear;
+
+                &:hover {
+                    background-color: $light-gray;
+                }
+            }
+        }
+
+        select {
+            display: none;
+        }
+
+        &.js-show-list {
+            .product-search-categories-list {
+                display: block;
+            }
         }
     }
 }

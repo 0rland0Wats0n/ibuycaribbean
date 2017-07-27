@@ -5835,10 +5835,38 @@ body {
       body .product-search .product-search-searchbox input {
         width: 100%;
         line-height: 50px;
-        font-size: 1.3em;
-        font-weight: 300;
+        font-size: 1.1em;
+        font-weight: 400;
         outline: none;
-        border: none; }
+        border: none;
+        color: #bebab3; }
+    body .product-search .product-search-togglecategory {
+      cursor: pointer;
+      text-align: center;
+      font-size: 1.2em;
+      position: relative; }
+      body .product-search .product-search-togglecategory .js-display-selected-category {
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #b2aea5; }
+        body .product-search .product-search-togglecategory .js-display-selected-category span {
+          margin-left: 10px; }
+      body .product-search .product-search-togglecategory .product-search-categories-list {
+        position: absolute;
+        display: none;
+        background-color: white;
+        width: 100%;
+        border: 1px solid #edecea; }
+        body .product-search .product-search-togglecategory .product-search-categories-list li {
+          line-height: 75px;
+          text-transform: uppercase;
+          transition: background-color 0.3s linear; }
+          body .product-search .product-search-togglecategory .product-search-categories-list li:hover {
+            background-color: #edecea; }
+      body .product-search .product-search-togglecategory select {
+        display: none; }
+      body .product-search .product-search-togglecategory.js-show-list .product-search-categories-list {
+        display: block; }
   body .cart {
     display: flex;
     flex-direction: row;
@@ -5898,7 +5926,7 @@ body {
     body header .header-middle .header-middle-container {
       display: flex;
       flex-wrap: wrap;
-      padding: 10px;
+      padding: 10px 10px 0;
       width: 750px;
       max-width: 100%;
       margin: 0 auto; }

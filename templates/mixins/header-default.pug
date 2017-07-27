@@ -20,7 +20,7 @@ mixin header-default
                     a(href="/")
                         img.logo(src="images/ibuycaribbeanv2_nobg.png" alt="Logo")
                 .header-middle-search
-                    +product-search
+                    +product-search(product_categories)
                 .header-middle-cart
                         +cart(cart_count.total, cart_count.quantity)
         .header-bottom
