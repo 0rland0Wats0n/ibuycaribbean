@@ -1,3 +1,6 @@
+include product-search
+include cart
+
 mixin header-default
     header
         .header-top
@@ -17,8 +20,10 @@ mixin header-default
                     a(href="/")
                         img.logo(src="images/ibuycaribbeanv2_nobg.png" alt="Logo")
                 .header-middle-search
-                    form(method="post")
-                        input(type="text", placeholder="Search")
+                    +product-search
                 .header-middle-cart
-                        h3 insert cart here
+                        +cart(cart_count.total, cart_count.quantity)
         .header-bottom
+            ul.header-bottom-list
+                each category in product_categories
+                    li: a(href="/product/category/" + category.category) #{category.category}

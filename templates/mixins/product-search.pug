@@ -1,0 +1,7 @@
+mixin product-search
+    form.product-search(method="post")
+        fieldset.product-search-searchbox
+            input(type="text", placeholder="Search for products")
+        fieldset.product-search-togglecategory
+            select(name="category")
+                option(value="All Categories", selected=selected) All Categories

@@ -1,0 +1,8 @@
+mixin cart(total, quantity)
+    a.cart(href="/cart")
+        .cart-quantity
+            p= quantity
+            span.glyphicon.glyphicon-shopping-cart
+        .cart-total
+            h2= total
+    //- TODO: Add hover feature

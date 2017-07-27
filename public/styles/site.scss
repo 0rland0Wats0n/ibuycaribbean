@@ -33,6 +33,9 @@ body {
         size: $font-size-base;
     }
 
-
+    // Misc
+    @import "site/misc/product-search";
+    @import "site/misc/cart";
+    
     @import "site/layout";
 }

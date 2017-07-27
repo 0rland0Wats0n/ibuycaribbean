@@ -1,0 +1,31 @@
+.cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .cart-quantity {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+
+        p {
+            margin: 0;
+            font: {
+                family: $font-family-secondary;
+                weight: bold;
+                size: 1.1em;
+            }
+            color: $very-dark-blue;
+        }
+
+        span {
+            font{
+                size: 1.4em;
+                family: $font-family-secondary;
+            }
+            color: darken($light-gray, 20%);
+        }
+    }
+}

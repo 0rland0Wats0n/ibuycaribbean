@@ -1,0 +1,23 @@
+.product-search {
+    display: flex;
+    flex-direction: row;
+
+    .product-search-togglecategory {
+        width: 30%;
+    }
+
+    .product-search-searchbox {
+        width: 70%;
+
+        input {
+            width: 100%;
+            line-height: 50px;
+            font: {
+                size: 1.3em;
+                weight: 300; 
+            }
+            outline: none;
+            border: none;
+        }
+    }
+}

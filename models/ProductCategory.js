@@ -6,10 +6,13 @@ var keystone = require('keystone'),
 * =====================
 **/
 
-ProductCategory = new keystone.List("ProductCategory");
+ProductCategory = new keystone.List("ProductCategory", {
+	autokey: { from: 'name', path: 'key', unique: true },
+    map: { name: 'category' }
+});
 
 ProductCategory.add({
-    category: { Type: Types.Text }
+    category: { type: Types.Text, initial: true, index: true }
 });
 
 ProductCategory.defaultColumns = "category";

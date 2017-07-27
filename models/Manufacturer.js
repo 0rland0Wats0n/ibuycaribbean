@@ -9,8 +9,8 @@ var keystone = require('keystone'),
 var Manufacturer = new keystone.List('Manufacturer');
 
 Manufacturer.add({
-    name: { type: Types.Text },
-    email: { type: Types.Email },
+    name: { type: Types.Text, initial: true },
+    email: { type: Types.Email, initial: true, unique: true, index: true },
     phone: {
         areacode : { type: Types.Number },
         number: { type: Types.Number }
