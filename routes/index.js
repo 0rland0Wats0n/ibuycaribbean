@@ -23,6 +23,7 @@ var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
 var CartMiddleware = require('../lib/middleware_cart');
+var CategoryMiddleware = require('../lib/middleware_categories');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -36,7 +37,7 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
-	app.get('/', CartMiddleware.getCartCount, routes.views.index);
+	app.get('/', CartMiddleware.getCartCount, CategoryMiddleware.getProductCategories, routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.all('/contact', routes.views.contact);
