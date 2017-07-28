@@ -12,7 +12,8 @@ ProductCategory = new keystone.List("ProductCategory", {
 });
 
 ProductCategory.add({
-    category: { type: Types.Text, initial: true, index: true }
+    category: { type: Types.Text, initial: true, index: true, unique: true },
+    image: { type: Types.CloudinaryImage, folder: "/product_category/", autoCleanup: true, label: "Display Image", initial: true }
 });
 
 ProductCategory.defaultColumns = "category";

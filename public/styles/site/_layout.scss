@@ -12,4 +12,20 @@ a:focus {
     text-decoration: none;
 }
 
+.col-full {
+    width: 750px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 998px) {
+        width: 1280px;
+    }
+}
+
+.section-heading {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
 @import "header";

@@ -5853,15 +5853,15 @@ body {
         margin: 0;
         font-weight: bold;
         font-size: 1.2em; }
-  body .home-banner {
+  body #home-banner {
     width: 1280px;
     max-width: 100%;
     margin: 0 auto;
     height: 560px;
     overflow: hidden;
     position: relative; }
-    body .home-banner .home-banner-left-button,
-    body .home-banner .home-banner-right-button {
+    body #home-banner .home-banner-left-button,
+    body #home-banner .home-banner-right-button {
       display: block;
       width: 100px;
       height: 100%;
@@ -5871,20 +5871,20 @@ body {
       align-items: center;
       justify-content: center;
       cursor: pointer; }
-      body .home-banner .home-banner-left-button .glyphicon,
-      body .home-banner .home-banner-right-button .glyphicon {
+      body #home-banner .home-banner-left-button .glyphicon,
+      body #home-banner .home-banner-right-button .glyphicon {
         font-size: 2em;
         color: white;
         text-shadow: 0 0 5px black;
         transition: all 0.2s ease-out; }
-      body .home-banner .home-banner-left-button:hover .glyphicon,
-      body .home-banner .home-banner-right-button:hover .glyphicon {
+      body #home-banner .home-banner-left-button:hover .glyphicon,
+      body #home-banner .home-banner-right-button:hover .glyphicon {
         font-size: 3.5em; }
-    body .home-banner .home-banner-left-button {
+    body #home-banner .home-banner-left-button {
       left: 0; }
-    body .home-banner .home-banner-right-button {
+    body #home-banner .home-banner-right-button {
       right: 0; }
-    body .home-banner .home-banner-image {
+    body #home-banner .home-banner-image {
       height: 100%;
       width: 100%;
       background-position: center;
@@ -5894,7 +5894,7 @@ body {
       position: absolute;
       transition: all 0.3s ease-out;
       opacity: 0; }
-      body .home-banner .home-banner-image.js-current-banner {
+      body #home-banner .home-banner-image.js-current-banner {
         display: block;
         opacity: 1; }
   body .product-search {
@@ -5961,6 +5961,56 @@ body {
         display: none; }
       body .product-search .product-search-togglecategory.js-show-list .product-search-categories-list {
         display: block; }
+  body #home-product-categories {
+    background-color: rgba(237, 236, 234, 0.5);
+    padding: 40px 20px; }
+    body #home-product-categories .home-product-categories-container .section-heading {
+      color: #a6a198;
+      text-transform: uppercase; }
+    body #home-product-categories .home-product-categories-container .home-product-categories {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center; }
+      body #home-product-categories .home-product-categories-container .home-product-categories .home-product-category {
+        width: 350px;
+        height: 500px;
+        max-width: 100%;
+        margin: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative; }
+        body #home-product-categories .home-product-categories-container .home-product-categories .home-product-category .home-product-category-overlay {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          background-color: rgba(96, 194, 34, 0.8);
+          transition: opacity 0.2s ease-in; }
+          body #home-product-categories .home-product-categories-container .home-product-categories .home-product-category .home-product-category-overlay .home-product-category-name {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            max-height: 10px;
+            font-size: 1.8em;
+            font-weight: normal;
+            font-family: "PT Serif", serif;
+            font-style: italic;
+            color: white; }
+          body #home-product-categories .home-product-categories-container .home-product-categories .home-product-category .home-product-category-overlay:hover {
+            opacity: 1; }
+          @media screen and (min-width: 768px) {
+            body #home-product-categories .home-product-categories-container .home-product-categories .home-product-category .home-product-category-overlay {
+              opacity: 0; } }
   body ul {
     list-style: none;
     margin: 0;
@@ -5971,6 +6021,17 @@ body {
   body a:focus {
     color: inherit;
     text-decoration: none; }
+  body .col-full {
+    width: 750px;
+    max-width: 100%;
+    margin: 0 auto; }
+    @media screen and (min-width: 998px) {
+      body .col-full {
+        width: 1280px; } }
+  body .section-heading {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px; }
   body header .header-top {
     padding: 5px 10px;
     background-color: #edecea;

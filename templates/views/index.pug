@@ -1,8 +1,9 @@
 extends ../layouts/default
 
 block content
+    //- BANNER
     if banner
-        .home-banner
+        #home-banner
             span.home-banner-left-button
                 span.glyphicon.glyphicon-chevron-left
             each image, index in banner.images
@@ -14,7 +15,19 @@ block content
                     .home-banner-image(style="background-image: url(" + image.url + ")", alt="Banner image")
             span.home-banner-right-button
                 span.glyphicon.glyphicon-chevron-right
-        
+    
+    //- PRODUCT CATEGORIES
+    if product_categories
+        #home-product-categories
+            .home-product-categories-container.col-full
+                h2.section-heading Product Categories
+                .home-product-categories
+                    each category in product_categories
+                        .home-product-category(style="background-image: url(" + category.image.url + ")")
+                            a.home-product-category-overlay(href="/product/category/" + category.category)
+                                .home-product-category-name= category.category
+                            
+            
 block js
     script(type="text/javascript", src="/js/home-banner.js")
 	

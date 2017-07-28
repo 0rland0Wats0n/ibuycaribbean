@@ -1,0 +1,72 @@
+#home-product-categories {
+    background-color: rgba($light-gray, 0.5);
+    padding: 40px 20px;
+
+    .home-product-categories-container {
+
+        .section-heading {
+            color: darken($light-gray, 30%);
+            text-transform: uppercase;
+        }
+
+        .home-product-categories {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+            .home-product-category {
+                width: 350px;
+                height: 500px;
+                max-width: 100%;
+                margin: 10px;
+                background: {
+                    size: cover;
+                    position: center;
+                    repeat: no-repeat;
+                }
+                position: relative;
+
+                .home-product-category-overlay {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    background-color: rgba($greeny-green, 0.8);
+                    transition: opacity 0.2s ease-in;
+
+                    .home-product-category-name {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        text-align: center;
+                        max-height: 10px;
+                        font: {
+                            size: 1.8em;
+                            weight: normal;
+                            family: $font-family-secondary;
+                            style: italic;
+                        }
+                        color: white;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        opacity: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}
