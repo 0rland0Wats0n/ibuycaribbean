@@ -5847,7 +5847,10 @@ body {
           size: 1.4em;
           family: "PT Serif", serif; }
   body .home-banner {
-    height: 500px;
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 560px;
     overflow: hidden;
     position: relative; }
     body .home-banner .home-banner-left-button,
@@ -5877,8 +5880,10 @@ body {
     body .home-banner .home-banner-image {
       height: 100%;
       width: 100%;
-      object-fit: cover;
-      object-position: center;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       position: absolute;
       transition: all 0.3s ease-out;
       opacity: 0; }

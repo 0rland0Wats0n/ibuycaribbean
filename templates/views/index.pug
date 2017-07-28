@@ -7,13 +7,11 @@ block content
                 span.glyphicon.glyphicon-chevron-left
             each image, index in banner.images
                 if index == 0
-                    img.home-banner-image.js-current-banner(src= image.url, alt="Banner image", data-slide-start="true")
-                else if index == 1
-                    img.home-banner-image(src= image.url, alt="Banner image")
+                    .home-banner-image.js-current-banner(style="background-image: url(" + image.url + ")", alt="Banner image", data-slide-start="true")
                 else if index == banner.images.length - 1
-                    img.home-banner-image(src= image.url, alt="Banner image", data-slide-end="true")
+                    .home-banner-image.js-current-banner(style="background-image: url(" + image.url + ")", alt="Banner image", data-slide-end="true")
                 else
-                    img.home-banner-image(src= image.url, alt="Banner image")
+                    .home-banner-image(style="background-image: url(" + image.url + ")", alt="Banner image")
             span.home-banner-right-button
                 span.glyphicon.glyphicon-chevron-right
         

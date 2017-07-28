@@ -1,5 +1,8 @@
 .home-banner {
-    height: 500px;
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 560px;
     overflow: hidden;
     position: relative;
 
@@ -41,8 +44,12 @@
     .home-banner-image {
         height: 100%;
         width: 100%;
-        object-fit: cover;
-        object-position: center;
+        background: {
+            position: center;
+            size: cover;
+            repeat: no-repeat;
+            attachment: fixed;
+        }
         position: absolute;
         transition: all 0.3s ease-out;
         opacity: 0;
