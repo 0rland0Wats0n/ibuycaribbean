@@ -1,0 +1,56 @@
+.home-banner {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+
+    .home-banner-left-button,
+    .home-banner-right-button {
+        display: block;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .glyphicon {
+            font-size: 2em;
+            color: white;
+            text-shadow: 0 0 5px black;
+            transition: all 0.2s ease-out;
+        }
+
+        &:hover {
+
+            .glyphicon {
+                font-size: 3.5em;
+            }
+        }
+    }
+
+    .home-banner-left-button {
+        left: 0;
+    }
+
+    .home-banner-right-button {
+        right: 0;
+    }
+
+    .home-banner-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        transition: all 0.3s ease-out;
+        opacity: 0;
+
+        &.js-current-banner {
+            display: block;
+            opacity: 1;
+        }
+
+    }
+}

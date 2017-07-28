@@ -5825,6 +5825,66 @@ button.close {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px; }
+  body .cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    body .cart .cart-quantity {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px; }
+      body .cart .cart-quantity p {
+        margin: 0;
+        font-family: "PT Serif", serif;
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #06303a; }
+      body .cart .cart-quantity span {
+        color: #bebab3; }
+        body .cart .cart-quantity span font {
+          size: 1.4em;
+          family: "PT Serif", serif; }
+  body .home-banner {
+    height: 500px;
+    overflow: hidden;
+    position: relative; }
+    body .home-banner .home-banner-left-button,
+    body .home-banner .home-banner-right-button {
+      display: block;
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+      body .home-banner .home-banner-left-button .glyphicon,
+      body .home-banner .home-banner-right-button .glyphicon {
+        font-size: 2em;
+        color: white;
+        text-shadow: 0 0 5px black;
+        transition: all 0.2s ease-out; }
+      body .home-banner .home-banner-left-button:hover .glyphicon,
+      body .home-banner .home-banner-right-button:hover .glyphicon {
+        font-size: 3.5em; }
+    body .home-banner .home-banner-left-button {
+      left: 0; }
+    body .home-banner .home-banner-right-button {
+      right: 0; }
+    body .home-banner .home-banner-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      transition: all 0.3s ease-out;
+      opacity: 0; }
+      body .home-banner .home-banner-image.js-current-banner {
+        display: block;
+        opacity: 1; }
   body .product-search {
     display: flex;
     flex-direction: row;
@@ -5870,27 +5930,6 @@ body {
         display: none; }
       body .product-search .product-search-togglecategory.js-show-list .product-search-categories-list {
         display: block; }
-  body .cart {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; }
-    body .cart .cart-quantity {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0 10px; }
-      body .cart .cart-quantity p {
-        margin: 0;
-        font-family: "PT Serif", serif;
-        font-weight: bold;
-        font-size: 1.1em;
-        color: #06303a; }
-      body .cart .cart-quantity span {
-        color: #bebab3; }
-        body .cart .cart-quantity span font {
-          size: 1.4em;
-          family: "PT Serif", serif; }
   body ul {
     list-style: none;
     margin: 0;

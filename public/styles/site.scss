@@ -34,8 +34,9 @@ body {
     }
 
     // Misc
-    @import "site/misc/product-search";
     @import "site/misc/cart";
-    
+    @import "site/misc/home-banner";
+    @import "site/misc/product-search";
+
     @import "site/layout";
 }

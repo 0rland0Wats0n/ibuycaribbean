@@ -1,11 +1,22 @@
 extends ../layouts/default
 
-block css
-    link(rel="stylesheet", type="text/css", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
-    link(rel="stylesheet", type="text/css", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
-
 block content
-    
+    if banner
+        .home-banner
+            span.home-banner-left-button
+                span.glyphicon.glyphicon-chevron-left
+            each image, index in banner.images
+                if index == 0
+                    img.home-banner-image.js-current-banner(src= image.url, alt="Banner image", data-slide-start="true")
+                else if index == 1
+                    img.home-banner-image(src= image.url, alt="Banner image")
+                else if index == banner.images.length - 1
+                    img.home-banner-image(src= image.url, alt="Banner image", data-slide-end="true")
+                else
+                    img.home-banner-image(src= image.url, alt="Banner image")
+            span.home-banner-right-button
+                span.glyphicon.glyphicon-chevron-right
+        
 block js
-    script(type="text/javascript", src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+    script(type="text/javascript", src="/js/home-banner.js")
 	
