@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
 
     .cart-quantity {
         display: flex;
@@ -17,7 +18,7 @@
                 weight: bold;
                 size: 1.1em;
             }
-            color: $very-dark-blue;
+            color: $greeny-green;
         }
 
         span {
@@ -26,6 +27,18 @@
                 family: $font-family-secondary;
             }
             color: darken($light-gray, 20%);
+        }
+    }
+
+    .cart-total {
+        color: $greeny-green;
+
+        p {
+            margin: 0;
+            font: {
+                weight: bold;
+                size: 1.2em;
+            }
         }
     }
 }

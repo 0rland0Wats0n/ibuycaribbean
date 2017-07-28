@@ -20,7 +20,36 @@
             }
             outline: none;
             border: none;
-            color: darken($light-gray, 20%);
+
+            &::placeholder {
+                color: darken($light-gray, 20%);
+                text-transform: uppercase;
+                opacity: 0.7;
+            }
+
+            &::-webkit-input-placeholder {
+                color: darken($light-gray, 20%);
+                text-transform: uppercase;
+                opacity: 0.7;
+            }
+
+            &:-ms-input-placeholder {
+                color: darken($light-gray, 20%);
+                text-transform: uppercase;
+                opacity: 0.7;
+            }
+
+            &::-ms-input-placeholder {
+                color: darken($light-gray, 20%);
+                text-transform: uppercase;
+                opacity: 0.7;
+            }
+            
+            &::-moz-placeholder {
+                color: darken($light-gray, 20%);
+                text-transform: uppercase;
+                opacity: 0.7;
+            }
         }
     }
 

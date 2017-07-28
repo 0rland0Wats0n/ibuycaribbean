@@ -74,6 +74,9 @@ header {
                 width: 50%;
                 text-align: right;
                 padding: 10px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
             }
 
             @media screen and (min-width: 998px) {
@@ -109,7 +112,7 @@ header {
     }
 
     .header-bottom {
-        background-color: $very-dark-blue;
+        background-color: $greeny-green;
         color: white;
 
         .header-bottom-list {
@@ -124,6 +127,11 @@ header {
                 }
                 text-transform: uppercase;
                 padding: 20px 15px;
+                transition: background-color 0.2s ease-in;
+
+                &:hover {
+                    background-color: darken($greeny-green, 5%);
+                }
             }
 
             @media screen and (min-width: 998px) {
