@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var productHelper = require('../../lib/helpers/product');
 
 var Banner = keystone.list('Banner');
 
@@ -23,6 +24,14 @@ exports = module.exports = function (req, res) {
                 locals.banner = banner;
                 next();
             });
+    });
+
+    // get recent products
+    view.on('init', function(next) {
+        productHelper.getRecent(5, function(products) {
+            locals.recent_products = products;
+            next();
+        });
     });
 
     // Render the view

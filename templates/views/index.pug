@@ -27,7 +27,20 @@ block content
                             a.home-product-category-overlay(href="/product/category/" + category.category)
                                 .home-product-category-name= category.category
                             
-            
+    //- RECENT PRODUCTS
+    if recent_products
+        #home-recent-products
+            .home-recent-products-container.col-full
+                h2.section-heading Recent Products
+                .home-recent-products
+                    each product in recent_products
+                        .home-recent-product(style="background-image: url(" + product.main_img.url + ")")
+                            //- TODO: create add to cart button
+                            a.home-recent-product-overlay(href="/product/view/" + product.name.short + "/" + product.id)
+                                .home-recent-product-details
+                                    p.home-recent-product-name= product.name.short
+                                    p.home-recent-product-price= product._.list_price.format("$0,0.00")
+                                    
 block js
     script(type="text/javascript", src="/js/home-banner.js")
 	

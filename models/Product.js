@@ -34,7 +34,11 @@ Product.add({
     list_price: { type: Types.Money, format: "$0,0.00", label: "Price", required: true, initial: true },
     sale_price: { type: Types.Money, format: "$0,0.00", label: "Sale Price" },
 }, "Inventory", {
-    quantity: { type: Types.Number, initial: true, default: 0, required: true }
+    quantity: { type: Types.Number, initial: true, default: 0, required: true },
+}, "Time", {
+    added_on: { type: Types.Date, default: Date.now },
+    updated_on: { type: Types.Date, default: Date.now },
+    expires_on: { type: Types.Date }
 });
 
 Product.defaultColumns = "name.short, list_price";
